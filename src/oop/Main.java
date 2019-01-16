@@ -18,6 +18,6 @@ public class Main {
         System.out.println(rect2.getHeight());
 
         System.out.println( rect.getWidth() );
-
+        int a = rect.getArea();
     }
 }
