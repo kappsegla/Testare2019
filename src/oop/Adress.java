@@ -35,4 +35,10 @@ public class Adress {
     public void setHouseNumber(int houseNumber) {
         this.houseNumber = houseNumber;
     }
+
+    @Override
+    public String toString() {
+        String s = street + " " + houseNumber + "\n" + city;
+        return s;
+    }
 }

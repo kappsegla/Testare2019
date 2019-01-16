@@ -55,4 +55,9 @@ public class Course {
     public void setAdress(Adress adress) {
         this.adress = adress;
     }
+
+    @Override
+    public String toString() {
+        return courseName + "\n" + teacher + "\n" + adress;
+    }
 }

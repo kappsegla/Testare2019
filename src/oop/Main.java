@@ -10,7 +10,14 @@ public class Main {
                 new Adress("Göteborg","Maskingatan",5),
                 90, 12);
 
+        Course course2 = new Course("Testning", teacher ,
+                new Adress("Göteborg","Maskingatan",5),
+                90, 12);
+        
         System.out.println(course.getTeacher().getName());
+
+        System.out.println( course );
+
 
 
 
