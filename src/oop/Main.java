@@ -15,6 +15,8 @@ public class Main {
         course.addStudent( new Student("Kalle","555-215") );
 
 
+
+
 //        Course course2 = new Course("Testning", teacher ,
 //                new Adress("Göteborg","Maskingatan",5),
 //                90, 12);
