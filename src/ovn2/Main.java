@@ -11,7 +11,7 @@ public class Main {
 
         System.out.println(myHouse);
 
-        Person pelle = new Person("Pelle","Crash test Dummy", 27, 184, Person.MALE);
+        Person pelle = new Person("Pelle","Crash test Dummy", 27, 184, Sex.OTHER);
 
         System.out.println(pelle);
     }

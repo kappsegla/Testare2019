@@ -2,16 +2,16 @@ package ovn2;
 
 public class Person {
 
-    public static final int FEMALE = 1;
-    public static final int MALE = 2;
+//    public static final int FEMALE = 1;
+//    public static final int MALE = 2;
 
     String name;
     String occupation;
     int age;
     int length;
-    int sex;
+    Sex sex;
 
-    public Person(String name, String occupation, int age, int length, int sex) {
+    public Person(String name, String occupation, int age, int length, Sex sex) {
         this.name = name;
         this.occupation = occupation;
         this.age = age;
@@ -51,11 +51,11 @@ public class Person {
         this.length = length;
     }
 
-    public int getSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(int sex) {
+    public void setSex(Sex sex) {
         this.sex = sex;
     }
 
@@ -66,7 +66,7 @@ public class Person {
                 ", occupation='" + occupation + '\'' +
                 ", age=" + age +
                 ", length=" + length +
-                ", sex=" + (sex == 1 ? "female":"male") +
+                ", sex=" + sex +
                 '}';
     }
 }
