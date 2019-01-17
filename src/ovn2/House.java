@@ -60,7 +60,12 @@ public class House {
 
     @Override
     public String toString() {
-        return "House: " + squareMeters + "m², " + floorCount + "floor(s), "
-                + value + " kr, " + constructionYear + ",\n" + adress;
+        return "House{" +
+                "squareMeters=" + squareMeters +
+                ", floorCount=" + floorCount +
+                ", value=" + value +
+                ", constructionYear=" + constructionYear +
+                ", adress=" + adress +
+                '}';
     }
 }
