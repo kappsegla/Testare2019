@@ -1,5 +1,7 @@
 package oop;
 
+import java.util.ArrayList;
+
 public class Course {
 
     private String courseName;
@@ -7,6 +9,7 @@ public class Course {
     private Adress adress;
     private int hours;
     private int students;
+    private ArrayList<Student> studentsList;
 
     public Course(String courseName, Teacher teacher, Adress adress, int hours, int students) {
         this.courseName = courseName;
@@ -14,6 +17,11 @@ public class Course {
         this.adress = adress;
         this.hours = hours;
         this.students = students;
+        studentsList = new ArrayList<>();
+    }
+
+    public void addStudent(Student student){
+        studentsList.add(student);
     }
 
     public String getCourseName() {
@@ -58,6 +66,16 @@ public class Course {
 
     @Override
     public String toString() {
-        return courseName + "\n" + teacher + "\n" + adress;
+        String s = courseName + "\n" + teacher + "\n" + adress + "\n";
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        int size = studentsList.size();
+
+        for (int i = 0; i < size; i++) {
+            stringBuilder.append(studentsList.get(i) + "\n");
+        }
+
+        return s + stringBuilder.toString();
     }
 }

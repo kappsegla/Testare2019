@@ -4,39 +4,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Point point1 = new Point(0.0,0.0);
-        Point point2 = new Point(3.0,0.0);
 
-        Point point3 = new Point(point2);
+        Teacher teacher = new Teacher("Martin", "555-123456");
 
-        point3.setX(4.0);
-        System.out.println(point2);
-        System.out.println(point3);
+        Course course = new Course("Java", teacher ,
+                new Adress("Göteborg","Maskingatan",5),
+                90, 12);
 
-
-
-        //double d = point1.distanceTo(point2);
-
-        //System.out.println( d );
+        course.addStudent( new Student("Jonas","555-345") );
+        course.addStudent( new Student("Kalle","555-215") );
 
 
-
-//        Teacher teacher = new Teacher("Martin", "555-123456");
-//
-//        Course course = new Course("Java", teacher ,
-//                new Adress("Göteborg","Maskingatan",5),
-//                90, 12);
-//
 //        Course course2 = new Course("Testning", teacher ,
 //                new Adress("Göteborg","Maskingatan",5),
 //                90, 12);
-//
-//
+
+
 
         //System.out.println(course.getTeacher().getName());
 
         //Use toString for printing course info
-  //      System.out.println( course );
+       System.out.println( course );
 
 
 
