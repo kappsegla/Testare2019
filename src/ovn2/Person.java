@@ -10,13 +10,23 @@ public class Person {
     int age;
     int length;
     Sex sex;
+    House house;
 
-    public Person(String name, String occupation, int age, int length, Sex sex) {
+    public Person(String name, String occupation, int age, int length, Sex sex, House house) {
         this.name = name;
         this.occupation = occupation;
         this.age = age;
         this.length = length;
         this.sex = sex;
+        this.house = house;
+    }
+
+    public House getHouse() {
+        return house;
+    }
+
+    public void setHouse(House house) {
+        this.house = house;
     }
 
     public String getName() {
@@ -67,6 +77,7 @@ public class Person {
                 ", age=" + age +
                 ", length=" + length +
                 ", sex=" + sex +
+                ", house=" + house +
                 '}';
     }
 }
