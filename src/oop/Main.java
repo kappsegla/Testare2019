@@ -14,6 +14,8 @@ public class Main {
         course.addStudent( new Student("Jonas","555-345") );
         course.addStudent( new Student("Kalle","555-215") );
 
+        course.setAllStudentGrades("G");
+
 
 
 
