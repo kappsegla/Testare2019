@@ -1,6 +1,7 @@
 package oop;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 
 public class Course {
 
@@ -77,5 +78,19 @@ public class Course {
         }
 
         return s + stringBuilder.toString();
+    }
+
+    public void setAllStudentGrades(String g) {
+//        for (int i = 0; i < studentsList.size(); i++) {
+//            studentsList.get(i).setGrade(g);
+//        }
+        //For each version
+        for(Student s : studentsList ) {
+            s.setGrade(g);
+        }
+
+//        //With lambda expression
+//        studentsList.forEach(student -> student.setGrade(g));
+
     }
 }
