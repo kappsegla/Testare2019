@@ -1,7 +1,10 @@
+import java.io.Serializable;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main {
+public class Main implements Serializable {
+    int anInt;
+
     static Scanner scanner = new Scanner(System.in);
     public static int getInt(){
         int tal = 0;
