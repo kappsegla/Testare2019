@@ -2,8 +2,7 @@ import java.io.Serializable;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main implements Serializable {
-    int anInt;
+public class Main {
 
     static Scanner scanner = new Scanner(System.in);
     public static int getInt(){

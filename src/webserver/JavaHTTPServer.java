@@ -11,6 +11,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.StringTokenizer;
 
@@ -26,6 +27,8 @@ public class JavaHTTPServer implements Runnable{
     // port to listen connection
     static final int PORT = 8080;
 
+    ArrayList<String> names = new ArrayList<>();
+
     // verbose mode
     static final boolean verbose = true;
 
@@ -34,6 +37,10 @@ public class JavaHTTPServer implements Runnable{
 
     public JavaHTTPServer(Socket c) {
         connect = c;
+
+        names.add("Kalle");
+        names.add("Olle");
+        names.add("Pelle");
     }
 
     public static void main(String[] args) {
@@ -128,8 +135,21 @@ public class JavaHTTPServer implements Runnable{
                     out.println(); // blank line between headers and content, very important !
                     out.flush(); // flush character output stream buffer
 
-                    dataOut.write(fileData, 0, fileLength);
-                    dataOut.flush();
+                    out.println("<!DOCTYPE html>\n" +
+                            "<html lang=\"en\">\n" +
+                            "<head>\n" +
+                            "    <meta charset=\"UTF-8\">\n" +
+                            "    <title>Main page</title>\n" +
+                            "</head>\n" +
+                            "<body><ul>");
+                    for (String s : names) {
+                        out.println("<li>" + s + "</li>");
+                    }
+                    out.println("</body></html>");
+                    out.flush();
+
+              //      dataOut.write(fileData, 0, fileLength);
+              //      dataOut.flush();
                 }
 
                 if (verbose) {
