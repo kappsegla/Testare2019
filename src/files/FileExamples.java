@@ -150,10 +150,22 @@ public class FileExamples {
         return 0.0;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
+        //readTextFileFromResources();
+        //readTextFileFromAbsolutePath();
+        String path = System.getProperty("user.home")
+                + File.separator + "Documents"
+                + File.separator + "index.html";
+        File file = new File(path);
 
-        
+        writeTextFile(file, "<!DOCTYPE html>" +
+                "<html>" +
+                "<head>" +
+                "<title>Test html doc.</title>" +
+                "</head>" +
+                "<body></body>" +
+                "</html>");
     }
 
 
