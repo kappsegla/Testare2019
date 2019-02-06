@@ -150,38 +150,47 @@ public class FileExamples {
         return 0.0;
     }
 
-    //Example that saves an arrayList with Book objects to a binary file and then
-    //reads it back. File path have to be changed depending on platform and username.
-    //See readTextFileFromAbsolutePath() for an example.
     public static void main(String[] args) {
-        ArrayList<Book> books = new ArrayList<>();
-        Book book = new Book("Martin", "Java Programming");
-        books.add(book);
 
-        File file = new File("C:\\Users\\Martin\\Documents\\books.bin");
 
-        //Save object to file
-        try (ObjectOutputStream out =
-                     new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(file)))) {
-            out.writeObject(books);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        
+    }
 
-        //Load from file
-        try (ObjectInputStream in =
-                     new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)))) {
-            ArrayList<Book> b = (ArrayList<Book>) in.readObject();
-            System.out.println(b.get(0));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+
+    /**
+     * Example that saves an arrayList with Book objects to a binary file and then
+     * reads it back. File path have to be changed depending on platform and username.
+     * //See readTextFileFromAbsolutePath() for an example.
+     */
+    public static void saveAndRestoreBookListExample() {
+//        ArrayList<Book> books = new ArrayList<>();
+//        Book book = new Book("Martin", "Java Programming");
+//        books.add(book);
+//
+//        File file = new File("C:\\Users\\Martin\\Documents\\books.bin");
+//
+//        //Save object to file
+//        try (ObjectOutputStream out =
+//                     new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(file)))) {
+//            out.writeObject(books);
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        //Load from file
+//        try (ObjectInputStream in =
+//                     new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)))) {
+//            ArrayList<Book> b = (ArrayList<Book>) in.readObject();
+//            System.out.println(b.get(0));
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
     }
 
 }
