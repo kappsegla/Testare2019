@@ -154,18 +154,20 @@ public class FileExamples {
 
         //readTextFileFromResources();
         //readTextFileFromAbsolutePath();
-        String path = System.getProperty("user.home")
-                + File.separator + "Documents"
-                + File.separator + "index.html";
-        File file = new File(path);
+//        String path = System.getProperty("user.home")
+//                + File.separator + "Documents"
+//                + File.separator + "index.html";
+//        File file = new File(path);
+//
+//        writeTextFile(file, "<!DOCTYPE html>" +
+//                "<html>" +
+//                "<head>" +
+//                "<title>Test html doc.</title>" +
+//                "</head>" +
+//                "<body></body>" +
+//                "</html>");
 
-        writeTextFile(file, "<!DOCTYPE html>" +
-                "<html>" +
-                "<head>" +
-                "<title>Test html doc.</title>" +
-                "</head>" +
-                "<body></body>" +
-                "</html>");
+        saveAndRestoreBookListExample();
     }
 
 
@@ -175,34 +177,44 @@ public class FileExamples {
      * //See readTextFileFromAbsolutePath() for an example.
      */
     public static void saveAndRestoreBookListExample() {
-//        ArrayList<Book> books = new ArrayList<>();
-//        Book book = new Book("Martin", "Java Programming");
-//        books.add(book);
-//
-//        File file = new File("C:\\Users\\Martin\\Documents\\books.bin");
-//
-//        //Save object to file
-//        try (ObjectOutputStream out =
-//                     new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(file)))) {
-//            out.writeObject(books);
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        //Load from file
-//        try (ObjectInputStream in =
-//                     new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)))) {
-//            ArrayList<Book> b = (ArrayList<Book>) in.readObject();
-//            System.out.println(b.get(0));
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
+        ArrayList<Book> books = new ArrayList<>();
+        Book book = new Book("Martin", "Java Programming");
+        books.add(book);
+        Book book2 = new Book("Knutsson", "HTML for Experts");
+        books.add(book2);
+
+        //books.stream().filter(book1 -> book.getAuthor().equals("Martin")).count();
+
+        String path = System.getProperty("user.home")
+                + File.separator + "Documents"
+                + File.separator + "books.bin";
+        File file = new File(path);
+
+        //Save object to file, run before closing the program
+        try (ObjectOutputStream out =
+                     new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(file)))) {
+            out.writeObject(books);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //Load from file, run this code first in your program on start.
+        try (ObjectInputStream in =
+                     new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)))) {
+            ArrayList<Book> b = (ArrayList<Book>) in.readObject();
+
+            System.out.println(b);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            //On first start you will end up here. No file available.
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 }
