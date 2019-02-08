@@ -15,19 +15,16 @@ public class Main {
 
         Customer customer = new Customer(id, name);
 
-        //Add this customer to storage
+        ListStorage storage = new ListStorage();
 
+        storage.addCustomer(customer);
 
         System.out.print("Search for customer: ");
         name = scanner.nextLine();
 
-
-        //searchresult = //Search for customer
-
+        Customer searchResult = storage.findFirstCustomer(name);
         //Print customer
-        //System.out.println(searchresult);
-
-
+        System.out.println(searchResult);
     }
 
 }

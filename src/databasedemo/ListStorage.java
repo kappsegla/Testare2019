@@ -38,12 +38,11 @@ public class ListStorage {
                      new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)))) {
             customers = (ArrayList<Customer>) in.readObject();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
             //On first start you will end up here. No file available.
         } catch (IOException e) {
-            e.printStackTrace();
+
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+
         }
     }
 
