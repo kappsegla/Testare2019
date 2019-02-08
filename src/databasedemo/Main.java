@@ -15,7 +15,7 @@ public class Main {
 
         Customer customer = new Customer(id, name);
 
-        ListStorage storage = new ListStorage();
+        SqLiteStorage storage = new SqLiteStorage();
 
         storage.addCustomer(customer);
 
