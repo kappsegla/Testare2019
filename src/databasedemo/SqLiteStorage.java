@@ -3,7 +3,7 @@ package databasedemo;
 import java.sql.*;
 import java.util.Scanner;
 
-public class SqLiteStorage {
+public class SqLiteStorage implements Storage {
     String path = "jdbc:sqlite:customers.db";
 
     SqLiteStorage() {
@@ -39,6 +39,10 @@ public class SqLiteStorage {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void close(){
+
     }
 
     public Customer findFirstCustomer(String name) {

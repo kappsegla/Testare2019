@@ -17,7 +17,9 @@ public class Main {
 
         //ListStorage storage = new ListStorage();
         //SqLiteStorage storage = new SqLiteStorage();
-        NitriteStorage storage = new NitriteStorage();
+        //NitriteStorage storage = new NitriteStorage();
+
+        Storage storage = new MongoDBStorage();
 
         storage.addCustomer(customer);
 
@@ -27,6 +29,8 @@ public class Main {
         Customer searchResult = storage.findFirstCustomer(name);
         //Print customer
         System.out.println(searchResult);
+
+        storage.close();
     }
 
 }

@@ -5,7 +5,7 @@ import files.Book;
 import java.io.*;
 import java.util.ArrayList;
 
-public class ListStorage {
+public class ListStorage implements Storage{
 
     ArrayList<Customer> customers = new ArrayList<>();
 
@@ -16,7 +16,7 @@ public class ListStorage {
 
     public void addCustomer(Customer customer){
         customers.add(customer);
-        saveToFile();
+        //saveToFile();
     }
 
     public Customer findFirstCustomer(String name){
@@ -25,6 +25,10 @@ public class ListStorage {
                 return c;
         }
         return new Customer(-1,"NoOne");
+    }
+
+    public void close(){
+        saveToFile();
     }
 
     private void loadFromFile() {
