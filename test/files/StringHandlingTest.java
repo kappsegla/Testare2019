@@ -15,4 +15,36 @@ class StringHandlingTest {
 
         assertEquals("Martin", testResult);
     }
+
+    @Test
+    void isFirstLetterUpperCaseAToZReturnsTrue() {
+
+        String testInput = "Martin";
+
+        boolean result = StringHandling.isFirstLetterUpperCase(testInput);
+
+        assertTrue(result);
+    }
+
+    @Test
+    void isFirstLetterUpperCaseEmptyStringReturnsFalse() {
+        String testInput = "";
+
+        boolean result = StringHandling.isFirstLetterUpperCase(testInput);
+
+        assertFalse(result);
+    }
+
+    @Test
+    void isFirstLetterUpperCaseNullValueReturnsFalse() {
+        String testInput = null;
+
+        boolean result = StringHandling.isFirstLetterUpperCase(testInput);
+
+        assertFalse(result);
+    }
+
+
+
+
 }
