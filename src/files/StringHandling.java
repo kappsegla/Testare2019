@@ -14,14 +14,11 @@ public class StringHandling {
         if (input == null || input.length() < 1)
             return false;
 
-        Character character = input.charAt(0);
-
-        if (character >= 0x41 && character <= 0x5A) {
+         if ( Character.isUpperCase(input.codePointAt(0))) {
             return true;
         } else {
             return false;
         }
-
     }
 
     /**

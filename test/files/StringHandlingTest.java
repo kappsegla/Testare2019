@@ -55,7 +55,12 @@ class StringHandlingTest {
         assertFalse(result);
     }
 
+    @Test
+    void isFirstLetterUpperCaseSpecialLetterReturnsTrue(){
+        String testInput = "Ѝartin";  //0x40D
 
+        boolean result = StringHandling.isFirstLetterUpperCase(testInput);
 
-
+        assertTrue(result);
+    }
 }
