@@ -27,6 +27,17 @@ class StringHandlingTest {
     }
 
     @Test
+    void isFirstLetterUpperCaseaTozReturnsFalse() {
+
+        String testInput = "martin";
+
+        boolean result = StringHandling.isFirstLetterUpperCase(testInput);
+
+        assertFalse(result);
+    }
+
+
+    @Test
     void isFirstLetterUpperCaseEmptyStringReturnsFalse() {
         String testInput = "";
 
