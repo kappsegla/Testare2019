@@ -71,8 +71,6 @@ public class DataBaseExample {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
 
 }
