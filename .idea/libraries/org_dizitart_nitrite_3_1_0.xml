@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="org.dizitart:nitrite:3.1.0" type="repository">
+    <properties maven-id="org.dizitart:nitrite:3.1.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/dizitart/nitrite/3.1.0/nitrite-3.1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/h2database/h2-mvstore/1.4.197/h2-mvstore-1.4.197.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.6/objenesis-2.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.5/jackson-databind-2.9.5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.9.5/jackson-core-2.9.5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.5/jackson-annotations-2.9.5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jasypt/jasypt/1.9.2/jasypt-1.9.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.9.1/okhttp-3.9.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/uk/co/jemos/podam/podam/7.2.0.RELEASE/podam-7.2.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.6/commons-lang3-3.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

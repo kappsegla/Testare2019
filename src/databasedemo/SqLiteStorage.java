@@ -29,8 +29,8 @@ public class SqLiteStorage {
             Connection sqliteConnection = DriverManager.getConnection(path);
 
             //Lägg till en kund i tabellen Customers
-            String sql_insert_customer = "INSERT INTO Customers(ID, Name)" +
-                    " VALUES("+ customer.id + ",'"+ customer.name + "');";
+            String sql_insert_customer = "INSERT INTO Customers(Name)" +
+                    " VALUES('"+ customer.name + "');";
 
             Statement stmt = sqliteConnection.createStatement();
             stmt.execute(sql_insert_customer);
