@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
+    //En liten kommentar
     static Scanner scanner = new Scanner(System.in);
     public static int getInt(){
         int tal = 0;
