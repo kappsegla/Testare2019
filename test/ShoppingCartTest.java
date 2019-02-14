@@ -10,7 +10,7 @@ class ShoppingCartTest {
 
         int start = shoppingCart.products.size();
 
-        shoppingCart.addProduct(new Product());
+      //  shoppingCart.addProduct(new Product());
 
         assertEquals(start + 1, shoppingCart.products.size());
 

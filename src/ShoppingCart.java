@@ -22,7 +22,7 @@ public class ShoppingCart {
         ShoppingCart sc = new ShoppingCart(c);
 
         //Best solution
-        sc.addProduct(new Product());
+        //sc.addProduct(new Product());
 
 
 

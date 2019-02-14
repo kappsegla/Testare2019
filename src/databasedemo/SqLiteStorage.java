@@ -69,4 +69,30 @@ public class SqLiteStorage implements Storage {
         }
         return customer;
     }
+
+    public Customer findFirstCustomerParameterized(String name) {
+        Customer customer = new Customer(-1, "NoOne");
+
+        try {
+            Connection sqliteConnection = DriverManager.getConnection(path);
+
+            //Hämta alla kunder med matchande namn
+            String sql_select_customer = "SELECT * FROM Customers WHERE NAME = ?";
+
+            PreparedStatement stmt = sqliteConnection.prepareStatement(sql_select_customer);
+            stmt.setString(1, name);
+
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                customer = new Customer(rs.getInt("ID"), rs.getString("Name"));
+            }
+            rs.close();
+            stmt.close();
+            sqliteConnection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return customer;
+    }
 }
